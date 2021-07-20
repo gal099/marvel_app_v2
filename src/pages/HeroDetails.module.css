@@ -1,2 +1,30 @@
 .detailsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  max-width: 400px;
+  margin: 15px;
+  height: auto;
+}
+
+.heroImage {
+  border-radius: 15px;
+}
+
+.heroDetails {
+  font-size: 1, 5rem;
+}
+
+.firstLine {
+  margin-top: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
 }
