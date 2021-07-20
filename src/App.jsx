@@ -16,7 +16,7 @@ function App() {
               <Route path="/list">
                 <HeroesList />
               </Route>
-              <Route path="/detail">
+              <Route path="/hero/:heroId">
                 <HeroDetails />
               </Route>
             </Switch>
