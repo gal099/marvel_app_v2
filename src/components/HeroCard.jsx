@@ -6,14 +6,16 @@ export function HeroCard(props) {
 
   return (
     <li className={styles.heroCard}>
-      <img
-        width={333}
-        height={333}
-        className={styles.heroImage}
-        src={imageUrl}
-        alt={props.hero.name}
-      />
-      <div>{props.hero.name}</div>
+      <Link to={`/hero/${props.hero.id}`}>
+        <img
+          width={333}
+          height={333}
+          className={styles.heroImage}
+          src={imageUrl}
+          alt={props.hero.name}
+        />
+        <div>{props.hero.name}</div>
+      </Link>
     </li>
   );
 }
