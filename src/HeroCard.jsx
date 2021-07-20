@@ -6,8 +6,8 @@ export function HeroCard(props) {
   return (
     <li className={styles.heroCard}>
       <img
-        width={230}
-        height={230}
+        width={333}
+        height={333}
         className={styles.heroImage}
         src={imageUrl}
         alt={props.hero.name}

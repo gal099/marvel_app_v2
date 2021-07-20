@@ -1,9 +1,17 @@
 .heroCard {
   list-style: none;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .heroImage {
   border-radius: 10px;
   background-color: azure;
+}
+
+@media (max-width: 335px) {
+  .heroImage {
+    width: 90%;
+    height: auto;
+  }
 }
