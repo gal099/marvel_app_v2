@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './HeroCard.module.css';
 
 export function HeroCard(props) {

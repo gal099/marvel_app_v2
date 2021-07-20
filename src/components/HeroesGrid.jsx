@@ -6,10 +6,15 @@ const hero = heroes.data.results;
 
 export function HeroesGrid() {
   return (
-    <ul className={styles.heroesGrid}>
-      {hero.map((elem) => (
-        <HeroCard key={elem.id} hero={elem} />
-      ))}
-    </ul>
+    <>
+      <header>
+        <h1 className={styles.title}>Heroes</h1>
+      </header>
+      <ul className={styles.heroesGrid}>
+        {hero.map((elem) => (
+          <HeroCard key={elem.id} hero={elem} />
+        ))}
+      </ul>
+    </>
   );
 }
