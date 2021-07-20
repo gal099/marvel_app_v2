@@ -1,9 +1,12 @@
+import { HeroCard } from './HeroCard';
+import heroes from './heroes.json';
+
 export function HeroesGrid() {
   return (
     <ul>
-      <li>Hero 1</li>
-      <li>Hero 2</li>
-      <li>Hero 3</li>
+      {heroes.data.results.map((elem) => (
+        <HeroCard key={elem.id} name={elem.name} />
+      ))}
     </ul>
   );
 }
