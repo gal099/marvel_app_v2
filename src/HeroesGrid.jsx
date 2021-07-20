@@ -5,7 +5,7 @@ export function HeroesGrid() {
   return (
     <ul>
       {heroes.data.results.map((elem) => (
-        <HeroCard key={elem.id} name={elem.name} />
+        <HeroCard key={elem.id} hero={elem} />
       ))}
     </ul>
   );
