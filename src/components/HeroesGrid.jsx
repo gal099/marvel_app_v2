@@ -3,7 +3,7 @@ import { HeroCard } from './HeroCard';
 import styles from './HeroesGrid.module.css';
 
 export function HeroesGrid() {
-  const [heroes, setHeroes] = useState([]);
+  const [hero, setHeroes] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -16,7 +16,7 @@ export function HeroesGrid() {
   return (
     <>
       <ul className={styles.heroesGrid}>
-        {heroes.map((elem) => (
+        {hero.map((elem) => (
           <HeroCard key={elem.id} hero={elem} />
         ))}
       </ul>
