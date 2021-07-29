@@ -7,19 +7,27 @@ import { useEffect, useState } from 'react';
 export function HeroDetails() {
   const { heroId } = useParams();
   const [heroe, setHeroe] = useState(null);
-  console.log('cargando al ', heroId);
+
+  console.log('start', '>heroId = ', heroId, ' >heroe = ', heroe);
 
   useEffect(() => {
+    console.log('passing through useEffect');
     fetch(
       `https://gateway.marvel.com:443/v1/public/characters/${heroId}?apikey=e7d57fb50cf5c7cd3da6c4bab80a741e&hash=9bae1d7bc80738cf67190f0d44a60163&ts=1626185133165`
     )
       .then((result) => result.json())
-      .then((data) => setHeroe(data.data.results[0]));
+      .then((data) => {
+        console.log('inside fetch', ' - parsed result: ', data.data.results[0]);
+        console.log('before use setHero');
+        setHeroe('setHero value');
+        console.log('after use setHero');
+      });
   }, [heroId]);
 
-  console.log(heroe);
+  console.log('below useEffect', ' >heroe = ', heroe);
 
   if (!heroe) {
+    console.warn('passing through conditional w/o data');
     return null;
   }
 
@@ -27,6 +35,7 @@ export function HeroDetails() {
 
   return (
     <>
+      {console.warn('passing through main return')}
       <TitlePage text={'Detalle del Héroe'} />
       <div className={styles.detailsContainer}>
         <img
