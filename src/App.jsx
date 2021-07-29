@@ -5,25 +5,19 @@ import { HeroesList } from './pages/HeroesList';
 
 function App() {
   return (
-    <div>
-      <main>
-        <Router>
-          <div>
-            <Switch>
-              <Route exact path="/">
-                <LandingPage />
-              </Route>
-              <Route path="/list">
-                <HeroesList />
-              </Route>
-              <Route path="/hero/:heroId">
-                <HeroDetails />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-      </main>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route path="/list">
+          <HeroesList />
+        </Route>
+        <Route path="/hero/:heroId">
+          <HeroDetails />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
